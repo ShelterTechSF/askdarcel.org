@@ -1,7 +1,9 @@
+import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 import Button from "../../inline/Button";
 import playIcon from "./PlayIcon.svg";
+
 import s from "./VideoSpotlightBlock.module.css";
 
 const TextCard = ({ eyebrowText, description, button }) => (
@@ -33,9 +35,9 @@ const VideoSpotlightBlock = ({
   playButtonOnClick,
   blackBackground,
 }) => {
-  const bleedBackgroundWrapper = `${s.bleedWrapper} ${
-    blackBackground ? s.blackBackground : ""
-  }`;
+  const bleedBackgroundWrapper = classNames(s.bleedWrapper, {
+    [s.blackBackground]: blackBackground,
+  });
 
   return (
     <div className={bleedBackgroundWrapper}>
