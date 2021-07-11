@@ -3,6 +3,7 @@
   grid-template-columns: var(--bleed-grid-template-columns);
   grid-template-rows: 600px;
   margin: auto;
+  margin-bottom: 120px;
   max-width: var(--bleed-max-width);
 }
 
